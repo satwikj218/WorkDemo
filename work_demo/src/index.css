@@ -11,6 +11,12 @@
     #6d6d6d -78.47%,
     #11101d 91.61%
   );
+  --green-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #e3ffdf -78.47%,
+    #e4ffdf 91.61%
+  );
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
 
@@ -21,12 +27,12 @@
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    /* #def9fa 0.89%, */
-    /* #bef3f5 17.23%, */
-    /* #9dedf0 42.04%, */
-    /* #7de7eb 55.12%, */
-    #6aa84f 71.54%,
-    #38761d 100%
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -34,19 +40,15 @@
   /* text-fill-color: transparent; */
 }
 
-.bg-orange-gradient {
+.bg-blue-gradient {
   background: linear-gradient(
-    144.39deg,
-    #e06666 71.54%,
-    #f44336 100%
-  );
-}
-
-.bg-green-gradient {
-  background: linear-gradient(
-    144.39deg,
-    #6aa84f 71.54%,
-    #38761d 100%
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
   );
 }
 
@@ -111,8 +113,12 @@
   }
 }
 
+.feature-card {
+  background: var(--green-gradient);
+}
+
 .feature-card:hover {
-  background: var(--black-gradient);
+  background: var(--green-gradient);
   box-shadow: var(--card-shadow);
 }
 
@@ -122,10 +128,12 @@
 
 .feedback-card {
   background: transparent;
+  background: var(--black-gradient);
 }
 
 .feedback-card:hover {
   background: var(--black-gradient);
+  color: #ffffff;
 }
 
 .blue__gradient {
@@ -141,4 +149,31 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.bg-orange-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #e06666 71.54%,
+    #f44336 100%
+  );
+}
+
+.bg-green-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #6aa84f 71.54%,
+    #38761d 100%
+  );
+}
+
+.text-gradient1 {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #6aa84f 71.54%,
+    #38761d 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
