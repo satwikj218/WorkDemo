@@ -15,6 +15,8 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import chatbot from "./chatbot.svg";
+import rightarrow from "./right-arrow.png";
 
 export {
   aihand,
@@ -34,4 +36,6 @@ export {
   people01,
   people02,
   people03,
+  chatbot,
+  rightarrow,
 };

@@ -1,14 +1,16 @@
 import { useState } from "react"
 import styles from "../style"
 import { close, docusDarkLogo, menu } from "../assets"
-import { navLinks } from "../constants"
+import { navLinks } from "../constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={docusDarkLogo} alt="logo" className="w=[124px] h-[32px]"/>
+      <h3 className="font-bold text-[30px] text-green">Visa Vanguard</h3>
+      {/* <img src={docusDarkLogo} alt="logo" className="w=[124px] h-[32px]"/> */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
@@ -20,9 +22,9 @@ const Navbar = () => {
             </a>
           </li>
         ))}
-        <button type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-orange-gradient rounded-[10px] outline-none ${styles}`}>
+        <Link to='/login' type="submit" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-orange-gradient rounded-[10px] outline-none ${styles}`}>
           Get Started for Free
-        </button>
+        </Link>
       </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">

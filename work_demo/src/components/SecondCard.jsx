@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { aihand } from '../assets'
+import { secondCard } from '../constants'
 import styles, { layout } from '../style'
 
 const SecondCard = () => (
@@ -8,13 +10,25 @@ const SecondCard = () => (
     </div>
 
     <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>Consult your <br className='sm:block hidden'/> AI Attorney</h2>
+      {secondCard.map((card) => (
+        <h2 className={styles.heading2}>{card.title}</h2>  
+      ))}
+      {secondCard.map((card) => (
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>{card.titleText}</p>
+      ))}
+      {/* <h2 className={styles.heading2}>Consult your <br className='sm:block hidden'/> AI Attorney</h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
       Discuss your legal queries, case specifics, and any law-related questions while engaging with your AI Attorney.
-      </p>
+      </p> */}
 
       <ul className='list-outside list-square ml-6'>
+        {secondCard[2].text.map((text) => (
           <li className="text-green-500">
+            <h4 className="font-poppins font-semibold text-black text-[18px] leading-[23.4px] mb-1 mt-10">{text.subheading}</h4>
+            <p className={`${styles.paragraph} max-w-[470px] mt-5`}>{text.text}</p>
+        </li>
+        ))}
+          {/* <li className="text-green-500">
             <h4 className="font-poppins font-semibold text-black text-[18px] leading-[23.4px] mb-1 mt-10">Assess Legal Scenarios</h4>
           </li>
           <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Obtain estimated probabilities of legal outcomes that assist you in comprehending potential case directions.</p>
@@ -27,12 +41,12 @@ const SecondCard = () => (
           <li className="text-green-500">
             <h4 className="font-poppins font-semibold text-black text-[18px] leading-[23.4px] mb-1 mt-10">Create Legal Briefs</h4>
           </li>
-          <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Produce comprehensive briefs from AI consultations to bolster discussions with your legal team..</p>
+          <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Produce comprehensive briefs from AI consultations to bolster discussions with your legal team..</p> */}
       </ul>
 
-      <button type="button" className={`py-4 px-6 bg-green-gradient font-poppins font-medium text-[18px] text-primary rounded-[10px] outline-none ${styles} rounded-[10px] mt-10`}>
+      <Link to='/login' type="submit" className={`py-4 px-6 bg-green-gradient font-poppins font-medium text-[18px] text-primary rounded-[10px] outline-none ${styles} rounded-[10px] mt-10`}>
         Start Chat
-      </button>
+      </Link>
     </div>
   </section>
 )

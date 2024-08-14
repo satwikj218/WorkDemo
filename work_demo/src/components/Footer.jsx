@@ -6,13 +6,14 @@ const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
       <div className="flex-[1] flex flex-col justify-start mr-10">
-        <img
+        {/* <img
           src={docusDarkLogo}
           alt="hoobank"
           className="w-[266px] h-[72.14px] object-contain"
-        />
+        /> */}
+        <h3 className="font-bold text-[30px] text-green">Visa Vanguard</h3>
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-        Improving human health through the combination of cutting-edge technologies and top medical expertise.
+          Visa Vanguard is a platform that helps you manage your legal issues all in one place.
         </p>
       </div>
 
@@ -41,7 +42,7 @@ const Footer = () => (
 
     <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
       <p className="font-poppins font-normal text-[15px] leading-[27px] text-black">
-        Ⓒ 2024 Docus. Inc. <br />
+        Ⓒ 2024 Visa Vanguard. Inc. <br />
         2810 N Church Street, Wilmington, DE 19802 United States
       </p>
 
